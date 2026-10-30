@@ -1,0 +1,199 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Field notes &middot; xayen &middot; Ekundayo Oyinkansola</title>
+  <meta name="description" content="Field notes from xayen: write-ups, build logs and postmortems from the security and full-stack bench. Published here as they're written.">
+  <meta name="theme-color" content="#0a0b0e">
+  <meta property="og:title" content="xayen &middot; field notes">
+  <meta property="og:description" content="Write-ups, build logs and postmortems from the security and full-stack bench.">
+  <meta property="og:type" content="website">
+  <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="assets/styles.css">
+  <script>document.documentElement.classList.add('js');</script>
+</head>
+<body>
+
+  <a class="skip-link" href="#notes">Skip to the notes</a>
+
+  <header class="site-top">
+    <a class="top-brand" href="index.html" aria-label="xayen home">
+      <span class="top-star" aria-hidden="true"></span>
+      <span class="top-word">xayen</span>
+    </a>
+    <p class="top-clock" aria-hidden="true"><span data-clock>GMT+1</span></p>
+  </header>
+
+  <canvas class="starmap" aria-hidden="true"></canvas>
+
+  <div class="scroll-progress" aria-hidden="true"><i></i></div>
+
+  <main id="main">
+
+    <!-- ============ BLOG HERO ============ -->
+
+    <section class="hero" aria-labelledby="blog-title">
+      <div class="hero-stage">
+        <article class="hero-card hero-card--flat">
+          <header class="card-top">
+            <p class="byline">Ekundayo Oyinkansola</p>
+            <nav class="card-nav" aria-label="Site sections">
+              <a href="index.html#work">Work</a>
+              <a href="index.html#about">About</a>
+              <a href="blog.html" aria-current="page">Blog</a>
+              <a href="index.html#contact">Contact</a>
+              <a class="card-nav-resume" href="assets/Ekundayo-Oyinkansola-Resume-2026.docx" download>Résumé <span aria-hidden="true">&darr;</span></a>
+            </nav>
+          </header>
+
+          <div class="blog-intro">
+            <p class="kicker" data-reveal>
+              <svg class="astro" viewBox="0 0 34 18" aria-hidden="true"><path class="astro-line" d="M2 4 L12 9 L21 4 L31 14"/><circle class="astro-star" cx="2" cy="4" r="1.5"/><circle class="astro-star" cx="12" cy="9" r="1.7"/><circle class="astro-star" cx="21" cy="4" r="1.5"/><circle class="astro-star astro-hot" cx="31" cy="14" r="2.1"/></svg>
+              05 &middot; Field notes
+            </p>
+
+            <h1 class="hero-title" id="blog-title">
+              <span class="line">Notes from <span class="tint">the field</span></span>
+            </h1>
+
+            <p class="hero-sub">
+              Write-ups, build logs and postmortems from the security and full-stack bench, published here as they&rsquo;re written, not before they&rsquo;re worth reading.
+            </p>
+
+            <div class="hero-status" aria-hidden="true">
+              <span class="hud-chip"><b>0</b> posts live</span>
+              <span class="hud-chip"><b class="ok">BUFFERED</b> draft state</span>
+              <span class="hud-chip"><b>STATIC</b> feed</span>
+            </div>
+          </div>
+
+          <span class="plus-mark plus-mark--1" aria-hidden="true"></span>
+          <span class="plus-mark plus-mark--2" aria-hidden="true"></span>
+          <p class="chart-note" aria-hidden="true">field 05 &middot; drafts buffered &middot; no feed</p>
+        </article>
+      </div>
+    </section>
+
+    <!-- ============ POST LIST ============ -->
+
+    <section class="section" id="notes" aria-labelledby="notes-title">
+      <div class="shell">
+        <div class="section-head" data-reveal>
+          <p class="kicker">
+            <svg class="astro" viewBox="0 0 34 18" aria-hidden="true"><path class="astro-line" d="M3 13 L13 5 L23 10 L31 4"/><circle class="astro-star" cx="3" cy="13" r="1.5"/><circle class="astro-star astro-hot" cx="13" cy="5" r="2.1"/><circle class="astro-star" cx="23" cy="10" r="1.6"/><circle class="astro-star" cx="31" cy="4" r="1.3"/></svg>
+            The log
+          </p>
+          <h2 class="section-title" id="notes-title">Every post, newest first.</h2>
+        </div>
+
+        <!-- ═════════════════════════════════════════════════════
+             TO PUBLISH A POST: copy the template below into this
+             list as a real <li class="post">, fill it in, delete
+             the empty-state <li class="post-ghost">. Newest post
+             goes at the top of the list.
+
+             Template:
+
+             <li class="post">
+               <a href="YOUR-POST-LINK">
+                 <span class="post-date">2026&#8209;01&#8209;15</span>
+                 <span class="post-main">
+                   <span class="post-title">Post title goes here</span>
+                   <span class="post-note">One-line teaser for the post.</span>
+                 </span>
+                 <span class="post-go">read <span aria-hidden="true">&nearr;</span></span>
+               </a>
+             </li>
+             ═════════════════════════════════════════════════════ -->
+
+        <ul class="post-list">
+          <li class="post-ghost">
+            <p class="post-ghost-code"><span aria-hidden="true">$</span> xayen --publish &quot;first post&quot;</p>
+            <p class="post-ghost-line">waiting on the write-up: notes are in the buffer<span class="caret" aria-hidden="true"></span></p>
+          </li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- ============ SIGNAL ============ -->
+
+    <section class="section" id="signal" aria-labelledby="signal-title">
+      <div class="shell">
+        <div class="section-head" data-reveal>
+          <p class="kicker">
+            <svg class="astro" viewBox="0 0 34 18" aria-hidden="true"><path class="astro-line" d="M17 3 L17 15 M8 9 L26 9"/><circle class="astro-star" cx="17" cy="3" r="1.5"/><circle class="astro-star" cx="17" cy="15" r="1.4"/><circle class="astro-star" cx="8" cy="9" r="1.6"/><circle class="astro-star" cx="26" cy="9" r="1.5"/><circle class="astro-star astro-hot" cx="17" cy="9" r="2.3"/></svg>
+            06 &middot; Signal
+          </p>
+          <h2 class="section-title" id="signal-title">Stay in orbit while the buffer fills.</h2>
+        </div>
+
+        <article class="contact-card contact-card--bare" data-reveal>
+          <span class="hud-c hud-tl" aria-hidden="true"></span>
+          <span class="hud-c hud-br" aria-hidden="true"></span>
+          <dl class="contact-grid">
+            <div>
+              <dt>Email</dt>
+              <dd><a href="mailto:belikexen@proton.me">belikexen@proton.me&nbsp;<span aria-hidden="true">&nearr;</span></a></dd>
+            </div>
+            <div>
+              <dt>GitHub</dt>
+              <dd><a href="https://github.com/Agenda-X-PR" target="_blank" rel="noopener noreferrer">github.com/Agenda&#8209;X&#8209;PR&nbsp;<span aria-hidden="true">&nearr;</span></a></dd>
+            </div>
+            <div>
+              <dt>LinkedIn</dt>
+              <dd><a href="https://linkedin.com/in/xayen" target="_blank" rel="noopener noreferrer">linkedin.com/in/xayen&nbsp;<span aria-hidden="true">&nearr;</span></a></dd>
+            </div>
+          </dl>
+        </article>
+      </div>
+    </section>
+
+    <!-- ============ BACK TO MAP ============ -->
+
+    <section class="section" id="map" aria-labelledby="map-title">
+      <div class="shell">
+        <article class="contact-card" data-reveal>
+          <span class="hud-c hud-tl" aria-hidden="true"></span>
+          <span class="hud-c hud-br" aria-hidden="true"></span>
+          <div class="blog-return">
+            <h2 class="section-title" id="map-title">The full map is one jump away.</h2>
+            <p class="blog-return-copy">Selected projects, open-source index, record and contacts live on the main chart.</p>
+            <div class="hero-cta">
+              <a class="star-btn star-btn--fill" href="index.html#work" aria-label="Return to the full map &nearr;: main page">
+                <span class="star" aria-hidden="true"></span>
+                <span class="star-label"><span class="star-l1">full</span><span class="star-l2">map &nearr;</span></span>
+              </a>
+              <a class="star-btn star-btn--ghost" href="index.html#contact" aria-label="Reach me &nearr;: contact xayen">
+                <span class="star" aria-hidden="true"></span>
+                <span class="star-label"><span class="star-l1">reach</span><span class="star-l2">me &nearr;</span></span>
+              </a>
+            </div>
+          </div>
+        </article>
+      </div>
+    </section>
+  </main>
+
+  <nav class="map-rail" aria-label="Section map">
+    <svg class="rail-svg" aria-hidden="true">
+      <polyline class="rail-line" points="0,0"></polyline>
+      <circle class="rail-tip" r="2.3" cx="-99" cy="-99"></circle>
+    </svg>
+    <a href="#notes"><span class="rail-star" aria-hidden="true"></span><span class="rail-label">notes</span></a>
+    <a href="#signal"><span class="rail-star" aria-hidden="true"></span><span class="rail-label">orbit</span></a>
+    <a href="#map"><span class="rail-star" aria-hidden="true"></span><span class="rail-label">map</span></a>
+  </nav>
+
+  <footer class="site-footer">
+    <div class="shell footer-row">
+      <p>&copy; <span id="year">2026</span> Ekundayo Oyinkansola &middot; xayen</p>
+      <p><span data-clock>GMT+1</span></p>
+      <p><span class="ok-dot" aria-hidden="true"></span>Hand-built, no frameworks.</p>
+    </div>
+    <p class="footer-map" aria-hidden="true"><span class="map-star" aria-hidden="true"></span>end of map &middot; signal held</p>
+  </footer>
+
+  <script src="assets/main.js" defer></script>
+</body>
+</html>
