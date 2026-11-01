@@ -17,15 +17,15 @@
 /* ─── Design tokens (tailwind v4) ─────────────────────────────── */
 
 @theme {
-  /* Chrome-black inverse: a paper world with ink chrome,
-     cobalt accents, and amber phosphor on a warm CRT */
+  /* strictly black and white: ink on paper everywhere,
+     white phosphor on an ink-black CRT */
   --color-paper: #f2f0ea;
   --color-paper-dim: #dcdad2;
   --color-ink: #101010;
-  --color-accent: #2b45d4;
-  --color-siren: #c23210;
-  --color-crt: #1a130a;
-  --color-phosphor: #ffae00;
+  --color-accent: #101010;
+  --color-siren: #101010;
+  --color-crt: #101010;
+  --color-phosphor: #f2f0ea;
 
   --font-sans: "DM Sans Variable", "DM Sans", ui-sans-serif, system-ui, sans-serif;
   --font-mono: "Departure Mono", ui-monospace, "Cascadia Mono", monospace;

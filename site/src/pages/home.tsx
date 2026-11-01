@@ -5,6 +5,21 @@ import { Window } from "@/components/window"
 
 const VERBS = ["spot", "score", "triage", "stop"]
 
+const TAGLINE = [
+  "Cybersecurity analyst",
+  "Full-stack developer",
+  "AI tooling",
+  "SDK author",
+]
+
+const FACTS = [
+  "Splunk SIEM · SIEM monitoring",
+  "Six open-source projects, all with CI",
+  "Llama 3.3 + FastAPI + React 19",
+  "picoCTF 2023 · top 15%",
+  "Open to global remote roles",
+]
+
 export default function HomePage() {
   useEffect(() => {
     document.title = "xayen · Ekundayo Oyinkansola · Security & Full Stack"
@@ -33,10 +48,26 @@ export default function HomePage() {
               />{" "}
               trouble before payouts notice.
             </p>
-            <p className="mt-3 max-w-md text-[14px] leading-relaxed text-ink/70">
-              Security and full stack. Early-warning engines, payment SDKs, and
-              AI security tooling, tested and shipped to production.
+            <p className="mt-3 max-w-md text-[14px] leading-relaxed text-ink/75">
+              Cybersecurity and full stack. SIEM monitoring and incident
+              response on one bench, production websites and SDK authorship on
+              the other. Every tool I ship carries automated tests and a CI
+              pipeline, and the honest ones say what they do not know.
             </p>
+            <p className="mt-2 max-w-md text-[13px] leading-relaxed text-ink/70">
+              Ijebu-Ode, Ogun, Nigeria: remote-first. Open to global remote
+              roles.
+            </p>
+            <ul className="mt-4 flex max-w-md flex-wrap gap-2" aria-label="Tagline">
+              {TAGLINE.map((tag) => (
+                <li
+                  key={tag}
+                  className="border-2 border-ink bg-paper px-2.5 py-1 font-mono text-[10px] uppercase tracking-[0.14em]"
+                >
+                  {tag}
+                </li>
+              ))}
+            </ul>
             <div className="mt-7 flex flex-wrap items-center gap-4">
               <PressLink to="/projects" variant="primary" aria-label="View work: open the projects page">
                 View work
@@ -87,30 +118,68 @@ export default function HomePage() {
           </div>
 
           <div className="grid gap-6 md:grid-cols-2">
-            <Window file="triage-engine.md" note="Agenda X · 2026 to present">
+            <Window file="triage-engine.md" note="Agenda X · live at agendax.com.ng/demo (synthetic data)">
               <h3 className="font-mono text-lg">Triage Engine</h3>
               <p className="mt-2 text-[13.5px] leading-relaxed text-ink/85">
-                Early-warning engine monitoring payment operators through public
-                signals: ingestion, scoring, and alert dispatch on one pipeline.
+                Crisis early-warning for Nigerian fintech. Scans Nigerian
+                news, Nairaland and Reddit every two hours, scores each
+                company 0 to 100 against its own baseline from negativity,
+                baseline growth and source spread, shows the reasons, and
+                drafts holding statements plus playbooks that a person
+                reviews before anything goes out.
               </p>
               <p className="mt-2 font-mono text-[11px] leading-relaxed text-ink/75">
-                Backtested on Flutterwave 2024, Paystack 2025, and OPay 2026: critical status in ≤48 h. In-sample, public news only (n = 3).
+                Backtested on public news coverage of Flutterwave 2024,
+                Paystack 2025, and OPay 2026: critical within two days of the
+                first story in all three, never above Watch in the three
+                weeks before each. Weights were tuned on the same incidents,
+                so it is in-sample, public news only (n = 3).
               </p>
               <PressLink to="/projects" variant="ghost" className="mt-4 self-start">
-                View project
+                How it is built
               </PressLink>
             </Window>
 
-            <Window file="llm-sentinel.md" note="Detection engineering · 25 tests">
-              <h3 className="font-mono text-lg">LLM Sentinel</h3>
+            <Window file="ai-triage-dashboard.md" note="Llama 3.3 via Groq · 25 unit tests · live demo">
+              <h3 className="font-mono text-lg">AI Triage Dashboard</h3>
               <p className="mt-2 text-[13.5px] leading-relaxed text-ink/85">
-                Full-stack security dashboard integrating Llama 3.3 via Groq API
-                for real-time incident summarization: React 19 + Vite frontend,
-                FastAPI backend, and 25 unit tests on the Python detection engine.
+                Full-stack AI security dashboard. React 19 + TypeScript + Vite
+                frontend, FastAPI backend, and Llama 3.3 via Groq generating
+                incident summaries in real time from a tested Python
+                detection engine: 25 unit tests, configurable model through
+                environment variables.
+              </p>
+              <p className="mt-2 font-mono text-[11px] leading-relaxed text-ink/75">
+                Live at ai-triage-dashboard.vercel.app · code on GitHub
               </p>
               <PressLink to="/projects" variant="ghost" className="mt-4 self-start">
-                View project
+                Read the build
               </PressLink>
+            </Window>
+
+            <Window file="open-ports.md" note="six open-source ships · CI on every one">
+              <h3 className="font-mono text-lg">The SDK fleet</h3>
+              <p className="mt-2 text-[13.5px] leading-relaxed text-ink/85">
+                Six open-source projects across Java, Python and TypeScript:
+                a tested ALATPay Java SDK (Wema Bank), a multi-gateway SDK
+                unifying Paystack, Flutterwave, Monnify and Interswitch, a
+                Python webhook reliability service, a defensive log-triaging
+                CLI, the AI dashboard above, and a payments fraud and abuse
+                detection platform. All six carry CI pipelines and automated
+                tests; the dashboard and the webhook relay run as live demos.
+              </p>
+              <PressLink to="/projects" variant="ghost" className="mt-4 self-start">
+                Every ship, in detail
+              </PressLink>
+            </Window>
+
+            <Window file="operator.facts" note="kept short · verified against the record">
+              <h3 className="font-mono text-lg">Operator facts</h3>
+              <ul className="mt-3 space-y-1.5 font-mono text-[11.5px] leading-relaxed text-ink/80">
+                {FACTS.map((fact) => (
+                  <li key={fact}>&gt; {fact}</li>
+                ))}
+              </ul>
             </Window>
           </div>
         </div>

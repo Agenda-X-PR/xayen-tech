@@ -8,5 +8,4 @@
   <rect width="16" height="16" fill="#f2f0ea"/>
   <rect x="2" y="2" width="12" height="12" fill="none" stroke="#101010" stroke-width="2"/>
   <rect x="4" y="4" width="8" height="8" fill="url(#dith)"/>
-  <rect x="10" y="10" width="2" height="2" fill="#2b45d4"/>
 </svg>

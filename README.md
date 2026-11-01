@@ -6,12 +6,13 @@ The live site is a multi-page React portfolio for Ekundayo Oyinkansola (xayen): 
 
 A paper-world take on System 7: ink chrome instead of black chrome.
 
-- **Desktop metaphor**: a menubar with a dithered logo button (opens a real Radix menu), an explicit **home button**: the `xayen` wordmark links to `/` and lights up in reverse video when home is active, mono navigation links, and a live **GMT+1 clock** that ticks in the menubar and the footer.
+- **Desktop metaphor**: a menubar where the **miniature window icon is the home button** (flips to reverse video on the home route), a plain text `menu` trigger opening a real Radix menu, mono navigation links, and a live **GMT+1 clock** in the menubar and footer. Chrome is strictly black and white.
 - **Pages**: `/` (hello + work + field notes), `/projects`, `/blog`, `/about`, `/contact`; unknown paths redirect home. Every route is its own lazy chunk, so the entry bundle only carries the shell.
 - **Fonts**: self-hosted only. **Departure Mono** (vendored woff2, OFL license included) for chrome, labels and headings; **DM Sans Variable** via fontsource for body copy. No CDN requests.
-- **Buttons**: no stars anymore. `PressButton` / `PressLink` are System 7 style chunks that physically press `4px` into the page on click (spring driven via Motion), plus `WindowTileLink` tiles for quick links. The favicon is a dithered ink square with a single cobalt pixel.
+- **Buttons**: no stars anymore. `PressButton` / `PressLink` are System 7 style chunks that physically press `4px` into the page on click (spring driven via Motion), plus `WindowTileLink` tiles for quick links. The favicon is a monochrome dithered ink square.
+- **Résumé-grade content**: project windows carry stacks, test counts and live-demo links (Triage Engine, AI Triage Dashboard, Payments Fraud & Abuse Detection, Webhook Relay, ALATPay Java SDK, Multi-Gateway Java SDK, sec-triage, the Geoplex bench years); the About page mirrors the record: education, languages, competitions, competencies grouped from the résumé. Find-me carries email, phone, base, brand-marked socials (GitHub, LinkedIn, Agenda X) and the three live demos.
 - **Windows everywhere**: content sits in retro windows with title bars, window dots, filename chips and hard offset shadows (`--shadow-brutal` family).
-- **Boot window**: the hero's right-hand window is a themed System 7 boot sequence (`boot.seq`) on an amber phosphor CRT: it mounts every route, arms its security module, morphs its status line (ready → armed → listening → booted) and runs a wash of amber glyph rain behind the panel. It is decoration: it displays no metrics and invents none, pauses when the tab hides, and freezes to one frame under `prefers-reduced-motion`.
+- **Boot window**: the hero's right-hand window is a themed System 7 boot sequence (`boot.seq`) on a white phosphor CRT: it mounts every route, arms its security module, morphs its status line (ready → armed → listening → booted) and runs a wash of white glyph rain behind the panel. It is decoration: it displays no metrics and invents none, pauses when the tab hides, and freezes to one frame under `prefers-reduced-motion`.
 - **Text morph**: the hero sentence cycles **spot → score → triage → stop** trouble before payouts notice, letter by letter with a spring stagger (hand-built with `AnimatePresence`; screen readers get a static `sr-only` copy, and reduced motion drops the theatrics).
 - **Motion**: routes swap behind a "swapping disk…" loading window; dialogs and menubars open with `mac-in` / `mac-out` keyframes.
 - **shadcn-style primitives**: `menubar`, `dialog`, `tooltip` and `separator` are hand-authored components in `site/src/components/ui/` on Radix APIs, reskinned to the paper/ink tokens.
@@ -25,9 +26,10 @@ Defined as Tailwind v4 `@theme` variables in `site/src/index.css`:
 | `--color-paper` | `#f2f0ea` | page ground |
 | `--color-paper-dim` | `#dcdad2` | bars, chrome |
 | `--color-ink` | `#101010` | text and borders |
-| `--color-accent` | `#2b45d4` | cobalt accent |
-| `--color-phosphor` | `#ffae00` | amber phosphor (CRT text) |
-| `--color-crt` | `#1a130a` | warm terminal ground |
+| `--color-phosphor` | `#f2f0ea` | white phosphor (CRT text) |
+| `--color-crt` | `#101010` | ink-black terminal ground |
+
+The system is strictly black and white: `--color-accent` and `--color-siren` alias to ink so no accent color leaks in.
 
 Utilities: `titlebar`, `win-dot`, `titlebar-name`, `halftone`, `halftone-dense`, `crtpanel`, `scanlines`, `reverse-video`, `dither-strip`, `caret-blink`.
 

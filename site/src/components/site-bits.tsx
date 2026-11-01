@@ -118,9 +118,9 @@ export function WindowTileLink({ to, label, muted, className }: WindowTileLinkPr
 const BOOT_WORDS = ["ready.", "armed.", "listening.", "booted."]
 
 /**
- * The boot window: a System 7 boot sequence on an amber phosphor CRT
+ * The boot window: a System 7 boot sequence on a white phosphor CRT
  * with a wash of glyph rain. Pure chrome by design: it states no
- * metrics and invents none.
+ * metrics and invents none. Black and white only.
  */
 export function BootTerminal({ className }: { className?: string }) {
   return (

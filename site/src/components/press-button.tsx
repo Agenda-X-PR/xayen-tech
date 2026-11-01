@@ -18,7 +18,7 @@ export function pressClasses(variant: Variant, size: Size) {
     size === "default" && "h-10 px-5 rounded-[6px]",
     size === "lg" && "h-12 px-7 rounded-[6px] text-[13px]",
     size === "icon" && "size-10 rounded-[6px]",
-    variant === "primary" && "bg-ink text-paper shadow-brutal-sm hover:bg-accent hover:text-paper",
+    variant === "primary" && "bg-ink text-paper shadow-brutal-sm hover:bg-paper hover:text-ink hover:shadow-none",
     variant === "ghost" && "bg-paper text-ink shadow-brutal-sm hover:bg-paper-dim"
   )
 }

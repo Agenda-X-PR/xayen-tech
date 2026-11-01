@@ -53,7 +53,7 @@ export function MatrixRain({
       if (!running || !ctx) return
       const h = canvas.clientHeight
       const w = canvas.clientWidth
-      ctx.fillStyle = "rgba(26, 19, 10, 0.16)"
+      ctx.fillStyle = "rgba(16, 16, 16, 0.16)"
       ctx.fillRect(0, 0, w, h)
       ctx.font = `600 ${fontSize}px "Departure Mono", ui-monospace, monospace`
 
@@ -63,11 +63,11 @@ export function MatrixRain({
         const x = i * fontSize + fontSize / 2
         const y = col.y * fontSize
 
-        ctx.fillStyle = "rgba(255, 174, 0, 0.92)"
+        ctx.fillStyle = "rgba(242, 240, 234, 0.92)"
         const glyph = GLYPH_POOL[(Math.random() * GLYPH_POOL.length) | 0]
         ctx.fillText(glyph, x, y)
 
-        ctx.fillStyle = "rgba(200, 120, 20, 0.45)"
+        ctx.fillStyle = "rgba(160, 158, 150, 0.45)"
         const tail = GLYPH_POOL[(Math.random() * GLYPH_POOL.length) | 0]
         ctx.fillText(tail, x, y - fontSize)
 
@@ -85,10 +85,10 @@ export function MatrixRain({
     const staticFrame = () => {
       const h = canvas.clientHeight
       const w = canvas.clientWidth
-      ctx.fillStyle = "#1a130a"
+      ctx.fillStyle = "#101010"
       ctx.fillRect(0, 0, w, h)
       ctx.font = `600 ${fontSize}px "Departure Mono", ui-monospace, monospace`
-      ctx.fillStyle = "rgba(255, 174, 0, 0.5)"
+      ctx.fillStyle = "rgba(242, 240, 234, 0.5)"
       for (let i = 0; i < columns; i++) {
         const col = drops[i]
         if (!col?.active) continue

@@ -1,4 +1,6 @@
-import { Suspense, lazy, useEffect } from "react"
+import { Suspense, lazy, useEffect, type ComponentType } from "react"
+import { FileDown, Globe } from "lucide-react"
+import { GithubIcon, LinkedinIcon } from "@/components/brand-icons"
 import { Navigate, Outlet, Route, Routes, useLocation } from "react-router-dom"
 import { DesktopBar } from "@/components/desktop-bar"
 import { useClock } from "@/hooks/use-clock"
@@ -51,25 +53,35 @@ function SiteFooter() {
             Ekundayo Oyinkansola · security &amp; full stack
           </p>
         </div>
-        <nav aria-label="Footer" className="flex flex-wrap items-start gap-x-4 gap-y-1.5">
+        <nav aria-label="Footer" className="flex flex-wrap items-start gap-x-4 gap-y-2">
           {[
-            ["GitHub", "https://github.com/Agenda-X-PR", "GitHub profile"],
-            ["LinkedIn", "https://linkedin.com/in/xayen", "LinkedIn profile"],
-            ["Agenda X", "https://agendax.com.ng", "Agenda X site"],
-            ["Résumé .docx", "/assets/Ekundayo-Oyinkansola-Resume-2026.docx", "Résumé .docx: Word document download"],
-          ].map(([label, href, aria]) => (
-            <a
-              key={label}
-              href={href}
-              download={label.startsWith("Résumé") || undefined}
-              target={href.startsWith("/") ? undefined : "_blank"}
-              rel={href.startsWith("/") ? undefined : "noopener noreferrer"}
-              aria-label={label.startsWith("Résumé") ? aria : undefined}
-              className="font-mono text-[11px] uppercase tracking-[0.14em] text-ink underline decoration-2 underline-offset-4 hover:bg-ink hover:text-paper hover:no-underline"
-            >
-              {label}
-            </a>
-          ))}
+            { label: "GitHub", href: "https://github.com/Agenda-X-PR", aria: undefined, icon: GithubIcon },
+            { label: "LinkedIn", href: "https://linkedin.com/in/xayen", aria: undefined, icon: LinkedinIcon },
+            { label: "Agenda X", href: "https://agendax.com.ng", aria: undefined, icon: Globe },
+            {
+              label: "Résumé .docx",
+              href: "/assets/Ekundayo-Oyinkansola-Resume-2026.docx",
+              aria: "Résumé .docx: Word document download",
+              icon: FileDown,
+            },
+          ].map((item) => {
+            const Icon = item.icon as ComponentType<{ className?: string }>
+            const isResume = item.label.startsWith("Résumé")
+            return (
+              <a
+                key={item.label}
+                href={item.href}
+                download={isResume || undefined}
+                target={item.href.startsWith("/") ? undefined : "_blank"}
+                rel={item.href.startsWith("/") ? undefined : "noopener noreferrer"}
+                aria-label={isResume ? item.aria : undefined}
+                className="flex items-center gap-1.5 font-mono text-[11px] uppercase tracking-[0.14em] text-ink underline decoration-2 underline-offset-4 hover:bg-ink hover:text-paper hover:no-underline"
+              >
+                <Icon aria-hidden="true" className="size-3.5" />
+                {item.label}
+              </a>
+            )
+          })}
         </nav>
         <div className="flex items-start justify-between gap-4 md:justify-end">
           <p className="font-mono text-[10px] uppercase tracking-[0.16em] text-ink/75">
