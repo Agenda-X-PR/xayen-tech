@@ -17,14 +17,15 @@
 /* ─── Design tokens (tailwind v4) ─────────────────────────────── */
 
 @theme {
-  /* Chrome-black inverse: a paper world with ink chrome */
+  /* Chrome-black inverse: a paper world with ink chrome,
+     cobalt accents, and amber phosphor on a warm CRT */
   --color-paper: #f2f0ea;
   --color-paper-dim: #dcdad2;
   --color-ink: #101010;
-  --color-matrix: #0e7a2f;
-  --color-matrix-red: #c23210;
-  --color-crt: #0a120c;
-  --color-phosphor: #3ddc70;
+  --color-accent: #2b45d4;
+  --color-siren: #c23210;
+  --color-crt: #1a130a;
+  --color-phosphor: #ffae00;
 
   --font-sans: "DM Sans Variable", "DM Sans", ui-sans-serif, system-ui, sans-serif;
   --font-mono: "Departure Mono", ui-monospace, "Cascadia Mono", monospace;
@@ -35,6 +36,7 @@
 
   --animate-mac-in: mac-in 170ms cubic-bezier(0.2, 0.9, 0.3, 1.2) both;
   --animate-mac-out: mac-out 130ms ease-in both;
+  --animate-boot-pulse: boot-pulse 1600ms steps(2, jump-none) infinite;
 
   @keyframes mac-in {
     from {
@@ -55,6 +57,15 @@
     to {
       opacity: 0;
       transform: translateY(-4px) scale(0.97);
+    }
+  }
+
+  @keyframes boot-pulse {
+    from {
+      opacity: 1;
+    }
+    to {
+      opacity: 0.45;
     }
   }
 }

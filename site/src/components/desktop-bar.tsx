@@ -66,6 +66,21 @@ export function DesktopBar() {
           </MenubarMenu>
         </Menubar>
 
+        <NavLink
+          to="/"
+          end
+          data-slot="home-link"
+          className={({ isActive }) =>
+            cn(
+              linkBase,
+              "px-4 text-[13px] tracking-[0.18em]",
+              isActive && "bg-ink text-paper"
+            )
+          }
+        >
+          xayen
+        </NavLink>
+
         <nav aria-label="Primary" className="flex min-w-0 flex-1 items-stretch overflow-x-auto">
           {NAV.map((item) => (
             <NavLink
@@ -82,7 +97,7 @@ export function DesktopBar() {
 
         <div className="flex shrink-0 items-center gap-3 px-3 sm:px-4">
           <span
-            className="hidden h-2 w-2 shrink-0 rounded-full bg-matrix sm:block"
+            className="hidden h-2 w-2 shrink-0 rounded-full bg-accent sm:block"
             aria-hidden="true"
           />
           <time className="font-mono text-[11px] tracking-[0.14em] text-ink">{clock}</time>

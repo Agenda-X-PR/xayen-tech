@@ -103,7 +103,7 @@ export function WindowTileLink({ to, label, muted, className }: WindowTileLinkPr
       className={cn(
         "group/tile flex items-center justify-between gap-3 border-2 border-ink bg-paper px-4 py-3",
         "shadow-brutal-sm hover:shadow-brutal outline-none",
-        "focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-matrix",
+        "focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-accent",
         "hover:bg-paper-dim",
         muted && "opacity-60",
         className
@@ -115,79 +115,46 @@ export function WindowTileLink({ to, label, muted, className }: WindowTileLinkPr
   )
 }
 
-export interface HeroTerminalProps {
-  className?: string
-}
+const BOOT_WORDS = ["ready.", "armed.", "listening.", "booted."]
 
-/** The hero terminal: matrix rain, the synth demo score and a live line. */
-export function HeroTerminal({ className }: HeroTerminalProps) {
+/**
+ * The boot window: a System 7 boot sequence on an amber phosphor CRT
+ * with a wash of glyph rain. Pure chrome by design: it states no
+ * metrics and invents none.
+ */
+export function BootTerminal({ className }: { className?: string }) {
   return (
     <Window
-      file="triage-engine --demo"
-      note="LIVE · illustrative synthetic scenario"
+      file="boot.seq"
+      note="themed boot screen · no real metrics shown"
       className={className}
       bodyClassName="p-0"
     >
-      <div className="relative">
+      <div className="crtpanel scanlines relative min-h-[240px]">
         <div className="absolute inset-0">
           <MatrixRain />
         </div>
-        <div className="relative z-10 flex flex-col gap-3 p-5">
-          <div className="flex items-end justify-between gap-4">
-            <p className="font-mono text-[11px] uppercase tracking-[0.18em] text-paper/85">
-              risk score
-            </p>
-            <p className="font-mono text-matrix text-[26px] leading-none">
-              54<span className="text-[13px] text-paper/70">/100</span>
-            </p>
-          </div>
-          <div className="flex flex-col gap-1">
-            {[86, 74, 61].map((w) => (
-              <div
-                key={w}
-                className="h-1.5 border border-phosphor/25 bg-phosphor/10"
-                style={{ width: `${w}%` }}
-              />
-            ))}
-          </div>
-          <div className="crtpanel scanlines border border-phosphor/30 px-3 py-2 font-mono text-[11px]">
-            <MorphWord
-              interval={2300}
-              words={[
-                "> scanning nairaland.com",
-                "> ingesting reddit batch 04",
-                "> scoring tracked banks",
-                "> baseline drift delta 0.02",
-                "> buffer flush - 0 dropped",
-              ]}
-              className="text-phosphor"
+        <div className="relative z-10 px-4 py-4 font-mono text-[11.5px] leading-relaxed text-phosphor">
+          <p>xayen os 7.5.3 · portfolio edition</p>
+          <p className="mt-0.5">{'>'} checking disks............ ok</p>
+          <p className="mt-0.5">{'>'} mounting /projects /blog /about /contact ✓</p>
+          <p className="mt-0.5">{'>'} security module............... armed</p>
+          <p className="mt-0.5 text-paper/85">
+            {'>'} pixels placed by hand · shadows ruthless
+          </p>
+          <p className="mt-2 text-[12.5px] tracking-[0.08em]">
+            <MorphWord interval={2100} words={BOOT_WORDS} />
+            <span
+              aria-hidden="true"
+              className="caret-blink ml-1 inline-block h-3.5 w-2 translate-y-0.5 bg-phosphor"
             />
-          </div>
-          <PressLink
-            href="https://agendax.com.ng/demo"
-            variant="primary"
-            aria-label="Open the demo: triage-engine --demo, live, 54 /100"
-            className="self-start"
-          >
-            Open the demo
-          </PressLink>
+          </p>
+          <div
+            role="presentation"
+            className="mt-2 h-2 w-full border border-phosphor/50 bg-crt motion-safe:animate-boot-pulse"
+          />
         </div>
       </div>
     </Window>
-  )
-}
-
-interface MorphWordVProps {
-  className?: string
-}
-
-/** The inline verb cycle inside the hero sentence. */
-export function MorphWordV({ className }: MorphWordVProps) {
-  return (
-    <MorphWord
-      interval={2400}
-      words={["break", "debug", "harden", "ship"]}
-      className={cn("inline-block text-matrix", className)}
-    />
   )
 }

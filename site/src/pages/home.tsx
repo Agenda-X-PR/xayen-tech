@@ -1,6 +1,9 @@
 import { useEffect } from "react"
-import { HeroTerminal, MorphWordV, PressLink, WindowTileLink } from "@/components/site-bits"
+import { MorphWord } from "@/components/morph-word"
+import { BootTerminal, PressLink, WindowTileLink } from "@/components/site-bits"
 import { Window } from "@/components/window"
+
+const VERBS = ["spot", "score", "triage", "stop"]
 
 export default function HomePage() {
   useEffect(() => {
@@ -21,8 +24,14 @@ export default function HomePage() {
               <br />
               I&rsquo;m xayen.
             </h1>
-            <p className="mt-5 max-w-md text-[15px] leading-relaxed text-ink/90">
-              I <MorphWordV /> software to build it better.
+            <p className="mt-5 max-w-md font-mono text-[15px] leading-relaxed text-ink">
+              I{" "}
+              <MorphWord
+                interval={2400}
+                words={VERBS}
+                className="inline-block text-accent"
+              />{" "}
+              trouble before payouts notice.
             </p>
             <p className="mt-3 max-w-md text-[14px] leading-relaxed text-ink/70">
               Security and full stack. Early-warning engines, payment SDKs, and
@@ -43,7 +52,7 @@ export default function HomePage() {
             </div>
           </div>
 
-          <HeroTerminal className="w-full max-w-md justify-self-center lg:max-w-none" />
+          <BootTerminal className="w-full max-w-md justify-self-center lg:max-w-none" />
         </div>
       </section>
 
@@ -146,7 +155,7 @@ export default function HomePage() {
             <div className="absolute top-16 left-1/2 w-[82%] -translate-x-1/2 md:top-20 md:w-[68%]">
               <Window file="field-notes.md" note="buffered draft state · 0 posts live">
                 <p className="font-mono text-[12px] text-ink">
-                  <span className="text-matrix">$</span> xayen --publish "first post"
+                  <span className="text-accent">$</span> xayen --publish "first post"
                 </p>
                 <p className="mt-1.5 font-mono text-[11.5px] text-ink/75">
                   waiting on the write-up: notes are in the buffer

@@ -57,7 +57,7 @@ export default function ContactPage() {
               >
                 {copied ? "Copied" : "Copy"}
               </button>
-              <span role="status" aria-live="polite" className="font-mono text-[11px] text-matrix">
+              <span role="status" aria-live="polite" className="font-mono text-[11px] text-accent">
                 {copied ? "email copied to clipboard" : ""}
               </span>
             </div>

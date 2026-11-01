@@ -92,7 +92,7 @@ function MenubarItem({
         "text-ink data-[disabled]:pointer-events-none data-[disabled]:opacity-50",
         "data-[highlighted]:bg-ink data-[highlighted]:text-paper",
         "focus-visible:bg-ink focus-visible:text-paper",
-        "data-[variant=destructive]:text-matrix-red data-[variant=destructive]:data-[highlighted]:bg-matrix-red data-[variant=destructive]:data-[highlighted]:text-paper",
+        "data-[variant=destructive]:text-siren data-[variant=destructive]:data-[highlighted]:bg-siren data-[variant=destructive]:data-[highlighted]:text-paper",
         "data-[inset]:pl-8 [&_svg]:pointer-events-none [&_svg]:shrink-0 [&_svg:not([class*='size-'])]:size-4",
         "last:border-b-0",
         className

@@ -66,7 +66,7 @@ export default function AboutPage() {
             <h3 className="font-mono text-lg">Method</h3>
             <ul className="mt-3 space-y-2 font-mono text-[12px] text-ink/80">
               <li>&gt; public news only, n = 3, in-sample: the backtest says what it is</li>
-              <li>&gt; synthetic scenarios are labelled synthetic</li>
+              <li>&gt; the boot screen is chrome, not data: it displays no invented stats</li>
               <li>&gt; uptime is measured, never invented</li>
             </ul>
           </Window>

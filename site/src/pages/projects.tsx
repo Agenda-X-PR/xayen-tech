@@ -1,5 +1,5 @@
 import { useEffect } from "react"
-import { HeroTerminal, PressLink } from "@/components/site-bits"
+import { BootTerminal, PressLink } from "@/components/site-bits"
 import { SectionHeader, Window } from "@/components/window"
 
 const TECH = [
@@ -48,9 +48,9 @@ export default function ProjectsPage() {
               critical status in ≤48 h. In-sample, public news only (n = 3).
             </p>
             <ul className="mt-3 grid gap-1 font-mono text-[11.5px] text-ink/75">
-              <li>&gt; ingesting reddit batch 04</li>
-              <li>&gt; scoring tracked banks</li>
-              <li>&gt; baseline drift delta 0.02</li>
+              <li>&gt; public signals in, scores out</li>
+              <li>&gt; alerts queued, never shouted</li>
+              <li>&gt; one audit trail end to end</li>
             </ul>
             <PressLink
               href="https://agendax.com.ng/demo"
@@ -99,8 +99,8 @@ export default function ProjectsPage() {
             <p className="mt-2 text-[13.5px] leading-relaxed text-ink/85">
               The Triage Engine backtest is in-sample and public-news-only,
               with three operator cases. Statements about detection health stay
-              tied to that scope, and the risk score in the hero terminal is an
-              illustrative synthetic scenario.
+              tied to that scope, and the hero boot screen is pure chrome: it
+              displays no live numbers and invents none.
             </p>
           </Window>
         </div>
@@ -119,7 +119,7 @@ export default function ProjectsPage() {
               ))}
             </ul>
           </Window>
-          <HeroTerminal />
+          <BootTerminal />
         </div>
 
         <div className="mt-10">

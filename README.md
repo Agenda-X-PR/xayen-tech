@@ -6,13 +6,13 @@ The live site is a multi-page React portfolio for Ekundayo Oyinkansola (xayen): 
 
 A paper-world take on System 7: ink chrome instead of black chrome.
 
-- **Desktop metaphor**: a menubar with a dithered logo button (opens a real Radix menu), mono navigation links, and a live **GMT+1 clock** that ticks in the menubar and the footer.
+- **Desktop metaphor**: a menubar with a dithered logo button (opens a real Radix menu), an explicit **home button**: the `xayen` wordmark links to `/` and lights up in reverse video when home is active, mono navigation links, and a live **GMT+1 clock** that ticks in the menubar and the footer.
 - **Pages**: `/` (hello + work + field notes), `/projects`, `/blog`, `/about`, `/contact`; unknown paths redirect home. Every route is its own lazy chunk, so the entry bundle only carries the shell.
 - **Fonts**: self-hosted only. **Departure Mono** (vendored woff2, OFL license included) for chrome, labels and headings; **DM Sans Variable** via fontsource for body copy. No CDN requests.
-- **Buttons**: no stars anymore. `PressButton` / `PressLink` are System 7 style chunks that physically press `4px` into the page on click (spring driven via Motion), plus `WindowTileLink` tiles for quick links.
+- **Buttons**: no stars anymore. `PressButton` / `PressLink` are System 7 style chunks that physically press `4px` into the page on click (spring driven via Motion), plus `WindowTileLink` tiles for quick links. The favicon is a dithered ink square with a single cobalt pixel.
 - **Windows everywhere**: content sits in retro windows with title bars, window dots, filename chips and hard offset shadows (`--shadow-brutal` family).
-- **Matrix rain**: the hero terminal (`triage-engine --demo`) runs a phosphor-green glyph rain on a CRT panel with scanlines. It pauses when the tab hides, and renders a single static frame under `prefers-reduced-motion`.
-- **Text morph**: the hero sentence cycles **break → debug → harden → ship** letter by letter with a spring stagger (hand-built with `AnimatePresence`; screen readers get a static `sr-only` copy, and reduced motion drops the theatrics).
+- **Boot window**: the hero's right-hand window is a themed System 7 boot sequence (`boot.seq`) on an amber phosphor CRT: it mounts every route, arms its security module, morphs its status line (ready → armed → listening → booted) and runs a wash of amber glyph rain behind the panel. It is decoration: it displays no metrics and invents none, pauses when the tab hides, and freezes to one frame under `prefers-reduced-motion`.
+- **Text morph**: the hero sentence cycles **spot → score → triage → stop** trouble before payouts notice, letter by letter with a spring stagger (hand-built with `AnimatePresence`; screen readers get a static `sr-only` copy, and reduced motion drops the theatrics).
 - **Motion**: routes swap behind a "swapping disk…" loading window; dialogs and menubars open with `mac-in` / `mac-out` keyframes.
 - **shadcn-style primitives**: `menubar`, `dialog`, `tooltip` and `separator` are hand-authored components in `site/src/components/ui/` on Radix APIs, reskinned to the paper/ink tokens.
 
@@ -25,9 +25,9 @@ Defined as Tailwind v4 `@theme` variables in `site/src/index.css`:
 | `--color-paper` | `#f2f0ea` | page ground |
 | `--color-paper-dim` | `#dcdad2` | bars, chrome |
 | `--color-ink` | `#101010` | text and borders |
-| `--color-matrix` | `#0e7a2f` | accent green |
-| `--color-phosphor` | `#3ddc70` | CRT text |
-| `--color-crt` | `#0a120c` | terminal ground |
+| `--color-accent` | `#2b45d4` | cobalt accent |
+| `--color-phosphor` | `#ffae00` | amber phosphor (CRT text) |
+| `--color-crt` | `#1a130a` | warm terminal ground |
 
 Utilities: `titlebar`, `win-dot`, `titlebar-name`, `halftone`, `halftone-dense`, `crtpanel`, `scanlines`, `reverse-video`, `dither-strip`, `caret-blink`.
 
@@ -67,4 +67,4 @@ After the `xayen.tech` domain is registered, point its DNS at the Pages endpoint
 
 ## Content guardrails
 
-The risk monitor in the hero terminal is explicitly labelled `LIVE · illustrative synthetic scenario`. The Triage Engine backtest is described as in-sample, public-news-only, n = 3: keep that caveat visible wherever the project is mentioned.
+The hero boot window is themed chrome: it displays no metrics and invents none. The Triage Engine backtest is described as in-sample, public-news-only, n = 3: keep that caveat visible wherever the project is mentioned.
