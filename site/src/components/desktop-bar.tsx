@@ -29,7 +29,7 @@ export function DesktopBar() {
         <Link
           to="/"
           data-slot="home-link"
-          aria-label="xayen: back to the desktop"
+          aria-label="Xayen: back to the desktop"
           title="home"
           className={cn(
             "group/home flex items-center px-3 outline-none focus-visible:bg-ink",

@@ -5,7 +5,7 @@ import { SectionHeader, Window } from "@/components/window"
 
 export default function BlogPage() {
   useEffect(() => {
-    document.title = "Field notes · xayen · Ekundayo Oyinkansola"
+    document.title = "Field notes · Xayen · Ekundayo Oyinkansola"
   }, [])
 
   const ghostSlots = Math.max(0, 3 - Math.min(3, posts.length))
@@ -28,7 +28,7 @@ export default function BlogPage() {
           {posts.length === 0 && (
             <Window file="field-notes.md" note="buffered draft state · 0 posts live">
               <p className="font-mono text-[12px] text-ink">
-                <span className="text-accent">$</span> xayen --publish "first post"
+                <span className="text-accent">$</span> Xayen --publish "first post"
               </p>
               <p className="mt-1.5 font-mono text-[11.5px] text-ink/75">
                 waiting on the write-up: notes are in the buffer

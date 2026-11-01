@@ -48,7 +48,7 @@ const DEMOS: Array<[string, string, string]> = [
 
 export default function ContactPage() {
   useEffect(() => {
-    document.title = "Find me · xayen · Ekundayo Oyinkansola"
+    document.title = "Find me · Xayen · Ekundayo Oyinkansola"
   }, [])
 
   const [copied, setCopied] = useState<"email" | null>(null)

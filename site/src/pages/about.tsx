@@ -98,7 +98,7 @@ const COMPETENCIES: Array<[string, string[]]> = [
 
 export default function AboutPage() {
   useEffect(() => {
-    document.title = "About · xayen · Ekundayo Oyinkansola"
+    document.title = "About · Xayen · Ekundayo Oyinkansola"
   }, [])
 
   return (
@@ -108,7 +108,7 @@ export default function AboutPage() {
 
         <div className="grid gap-6 lg:grid-cols-[1.2fr_0.8fr]">
           <Window file="about.md" note="hand-built · every claim carries a paper trail">
-            <h3 className="font-mono text-lg">xayen · Ekundayo Oyinkansola</h3>
+            <h3 className="font-mono text-lg">Xayen · Ekundayo Oyinkansola</h3>
             <p className="mt-2 text-[14px] leading-relaxed text-ink/90">
               Cybersecurity analyst, full-stack developer, AI tooling builder
               and SDK author from Lagos, Nigeria: remote-first, open
@@ -126,6 +126,8 @@ export default function AboutPage() {
               and SDK tooling taught me to fix them.
             </p>
             <p className="mt-3 text-[13.5px] leading-relaxed text-ink/75">
+              Hacktoberfest 2026 closed with Best Open-Source AI Project, won
+              with OnaAsa at Hacktoberfest Hack Day Lagos x AI Collectives.
               Six open-source projects shipped across Java, Python and
               TypeScript, each with CI pipelines and automated tests, two of
               them running as live demos. The tooling habit: write the tests,
@@ -163,14 +165,21 @@ export default function AboutPage() {
 
           <Window
             file="competitions.md"
-            note="picoCTF 2023 · Hack The Box · ECOWAS 2023/24"
+            note="Hacktoberfest 2026 · picoCTF 2023 · Hack The Box · ECOWAS 2023/24"
           >
             <h3 className="font-mono text-lg">Competitions &amp; practice</h3>
             <ul className="mt-3 space-y-2 font-mono text-[11.5px] leading-relaxed text-ink/80">
+              <li>&gt; Hacktoberfest 2026: won Best Open-Source AI Project with OnaAsa at Hacktoberfest Hack Day Lagos x AI Collectives, October 10, 2026</li>
               <li>&gt; picoCTF 2023: top 15% on exploit-development and reverse-engineering challenges</li>
               <li>&gt; Hack The Box: 50+ machines, focused on enumeration, privilege escalation, network exploitation</li>
               <li>&gt; ECOWAS Hacking Tournament: 2023 and 2024 regional participant, ethical hacking and defensive security</li>
             </ul>
+            <a
+              href="/assets/hacktoberfest-2026-certificate.pdf"
+              className="mt-3 inline-flex font-mono text-[11.5px] underline decoration-2 underline-offset-4 hover:bg-ink hover:text-paper hover:no-underline"
+            >
+              View the certificate <span aria-hidden="true">↗</span>
+            </a>
           </Window>
         </div>
 

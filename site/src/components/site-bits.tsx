@@ -135,7 +135,7 @@ export function BootTerminal({ className }: { className?: string }) {
           <MatrixRain />
         </div>
         <div className="relative z-10 px-4 py-4 font-mono text-[11.5px] leading-relaxed text-phosphor">
-          <p>xayen os 7.5.3 · portfolio edition</p>
+          <p>Xayen OS 7.5.3 · portfolio edition</p>
           <p className="mt-0.5">{'>'} checking disks............ ok</p>
           <p className="mt-0.5">{'>'} mounting /projects /blog /about /contact ✓</p>
           <p className="mt-0.5">{'>'} security module............... armed</p>

@@ -1,6 +1,6 @@
 # Ekundayo Oyinkansola · Portfolio
 
-The live site is a multi-page React portfolio for Ekundayo Oyinkansola (xayen): cybersecurity analyst, full-stack developer and SDK author. It lives in `site/`, builds with Vite, and deploys to GitHub Pages through `.github/workflows/deploy-site.yml`.
+The live site is a multi-page React portfolio for Ekundayo Oyinkansola (Xayen): cybersecurity analyst, full-stack developer and SDK author. It lives in `site/`, builds with Vite, and deploys to GitHub Pages through `.github/workflows/deploy-site.yml`.
 
 ## The current build: retro Mac OS
 

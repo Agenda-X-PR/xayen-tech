@@ -48,7 +48,7 @@ function SiteFooter() {
     <footer className="border-t-2 border-ink bg-paper-dim">
       <div className="mx-auto grid max-w-6xl gap-4 px-4 py-8 sm:px-6 md:grid-cols-3">
         <div>
-          <p className="font-mono text-[13px] uppercase tracking-[0.2em]">xayen</p>
+          <p className="font-mono text-[13px] uppercase tracking-[0.2em]">Xayen</p>
           <p className="mt-1 font-mono text-[10px] uppercase tracking-[0.16em] text-ink/75">
             Ekundayo Oyinkansola · security &amp; full stack
           </p>

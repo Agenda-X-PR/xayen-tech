@@ -1,5 +1,6 @@
 import { useEffect } from "react"
 import { MorphWord } from "@/components/morph-word"
+import { ScrambleWord } from "@/components/scramble-word"
 import { BootTerminal, PressLink, WindowTileLink } from "@/components/site-bits"
 import { Window } from "@/components/window"
 
@@ -13,6 +14,7 @@ const TAGLINE = [
 ]
 
 const FACTS = [
+  "Hacktoberfest 2026: Best Open-Source AI Project",
   "Splunk SIEM · SIEM monitoring",
   "Six open-source projects, all with CI",
   "Llama 3.3 + FastAPI + React 19",
@@ -22,7 +24,7 @@ const FACTS = [
 
 export default function HomePage() {
   useEffect(() => {
-    document.title = "xayen · Ekundayo Oyinkansola · Security & Full Stack"
+    document.title = "Xayen · Ekundayo Oyinkansola · Security & Full Stack"
   }, [])
 
   return (
@@ -37,7 +39,12 @@ export default function HomePage() {
             <h1 className="mt-4 font-mono text-[clamp(2.8rem,9vw,5.5rem)] leading-[0.95] tracking-tight">
               Hello.
               <br />
-              I&rsquo;m xayen.
+              I&rsquo;m{" "}
+              <ScrambleWord
+                text="Xayen"
+                className="inline-block"
+              />
+.
             </h1>
             <p className="mt-5 max-w-md font-mono text-[15px] leading-relaxed text-ink">
               I{" "}
@@ -223,7 +230,7 @@ export default function HomePage() {
             <div className="absolute top-16 left-1/2 w-[82%] -translate-x-1/2 md:top-20 md:w-[68%]">
               <Window file="field-notes.md" note="buffered draft state · 0 posts live">
                 <p className="font-mono text-[12px] text-ink">
-                  <span className="text-accent">$</span> xayen --publish "first post"
+                  <span className="text-accent">$</span> Xayen --publish "first post"
                 </p>
                 <p className="mt-1.5 font-mono text-[11.5px] text-ink/75">
                   waiting on the write-up: notes are in the buffer

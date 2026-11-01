@@ -31,7 +31,7 @@ const SKILLS = [
 
 export default function ProjectsPage() {
   useEffect(() => {
-    document.title = "Projects · xayen · Ekundayo Oyinkansola"
+    document.title = "Projects · Xayen · Ekundayo Oyinkansola"
   }, [])
 
   return (
