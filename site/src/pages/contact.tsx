@@ -118,7 +118,7 @@ export default function ContactPage() {
               </div>
               <div>
                 <dt className="text-[10px] uppercase tracking-[0.18em] text-ink/60">Base</dt>
-                <dd className="mt-1.5">Ijebu-Ode, Ogun, Nigeria · remote-first</dd>
+                <dd className="mt-1.5">Lagos, Nigeria · remote-first</dd>
               </div>
             </dl>
             <span role="status" aria-live="polite" className="sr-only">

@@ -111,7 +111,7 @@ export default function AboutPage() {
             <h3 className="font-mono text-lg">xayen · Ekundayo Oyinkansola</h3>
             <p className="mt-2 text-[14px] leading-relaxed text-ink/90">
               Cybersecurity analyst, full-stack developer, AI tooling builder
-              and SDK author from Ijebu-Ode, Ogun, Nigeria: remote-first, open
+              and SDK author from Lagos, Nigeria: remote-first, open
               to global remote roles. Founder and CEO of{" "}
               <strong>Agenda X</strong>, where I build early-warning systems
               and payment infrastructure designed to hold up under pressure.

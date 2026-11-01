@@ -1,15 +1,6 @@
 import { Link, NavLink } from "react-router-dom"
 import { cn } from "@/lib/utils"
 import { useClock } from "@/hooks/use-clock"
-import {
-  Menubar,
-  MenubarContent,
-  MenubarItem,
-  MenubarLabel,
-  MenubarMenu,
-  MenubarSeparator,
-  MenubarTrigger,
-} from "@/components/ui/menubar"
 
 const NAV = [
   { to: "/projects", label: "Projects" },
@@ -25,9 +16,10 @@ const linkBase = cn(
 )
 
 /**
- * The desktop menubar: sticky top strip. The miniature window icon is
- * the home button; a plain text trigger drives the system menu; plain
- * navigation in the middle; live clock right. Black and white only.
+ * The desktop menubar: sticky top strip, in the shape of a classic
+ * application menubar. The miniature window icon is the home button;
+ * navigation sits directly in the bar; the résumé download rides with
+ * the nav; live clock right. No dropdown trigger: the bar is the menu.
  */
 export function DesktopBar() {
   const clock = useClock()
@@ -53,37 +45,6 @@ export function DesktopBar() {
           </span>
         </Link>
 
-        <Menubar className="border-0 bg-transparent">
-          <MenubarMenu>
-            <MenubarTrigger className="px-3 sm:px-4">menu</MenubarTrigger>
-            <MenubarContent>
-              <MenubarLabel>xayen · Ekundayo Oyinkansola</MenubarLabel>
-              <MenubarItem asChild>
-                <Link to="/">Home</Link>
-              </MenubarItem>
-              <MenubarItem asChild>
-                <Link to="/projects">Projects</Link>
-              </MenubarItem>
-              <MenubarItem asChild>
-                <Link to="/blog">Blog</Link>
-              </MenubarItem>
-              <MenubarSeparator />
-              <MenubarItem asChild>
-                <Link to="/contact">Find me</Link>
-              </MenubarItem>
-              <MenubarItem asChild>
-                <a
-                  href="/assets/Ekundayo-Oyinkansola-Resume-2026.docx"
-                  download
-                  aria-label="Résumé .docx: Word document download"
-                >
-                  Résumé .docx ↓
-                </a>
-              </MenubarItem>
-            </MenubarContent>
-          </MenubarMenu>
-        </Menubar>
-
         <nav aria-label="Primary" className="flex min-w-0 flex-1 items-stretch overflow-x-auto">
           {NAV.map((item) => (
             <NavLink
@@ -96,6 +57,14 @@ export function DesktopBar() {
               {item.label}
             </NavLink>
           ))}
+          <a
+            href="/assets/Ekundayo-Oyinkansola-Resume-2026.docx"
+            download
+            aria-label="Résumé .docx: Word document download"
+            className={linkBase}
+          >
+            Résumé <span aria-hidden="true">↓</span>
+          </a>
         </nav>
 
         <div className="flex shrink-0 items-center gap-3 px-3 sm:px-4">

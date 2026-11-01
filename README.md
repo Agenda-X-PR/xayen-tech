@@ -6,7 +6,7 @@ The live site is a multi-page React portfolio for Ekundayo Oyinkansola (xayen): 
 
 A paper-world take on System 7: ink chrome instead of black chrome.
 
-- **Desktop metaphor**: a menubar where the **miniature window icon is the home button** (flips to reverse video on the home route), a plain text `menu` trigger opening a real Radix menu, mono navigation links, and a live **GMT+1 clock** in the menubar and footer. Chrome is strictly black and white.
+- **Desktop metaphor**: an application menubar where the **miniature window icon is the home button** (flips to reverse video on the home route), mono navigation links and the résumé download sit directly in the bar, and a live **GMT+1 clock** ticks in the menubar and footer. No dropdown trigger: the bar is the menu. Chrome is strictly black and white.
 - **Pages**: `/` (hello + work + field notes), `/projects`, `/blog`, `/about`, `/contact`; unknown paths redirect home. Every route is its own lazy chunk, so the entry bundle only carries the shell.
 - **Fonts**: self-hosted only. **Departure Mono** (vendored woff2, OFL license included) for chrome, labels and headings; **DM Sans Variable** via fontsource for body copy. No CDN requests.
 - **Buttons**: no stars anymore. `PressButton` / `PressLink` are System 7 style chunks that physically press `4px` into the page on click (spring driven via Motion), plus `WindowTileLink` tiles for quick links. The favicon is a monochrome dithered ink square.

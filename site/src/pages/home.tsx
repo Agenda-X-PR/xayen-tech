@@ -55,8 +55,7 @@ export default function HomePage() {
               pipeline, and the honest ones say what they do not know.
             </p>
             <p className="mt-2 max-w-md text-[13px] leading-relaxed text-ink/70">
-              Ijebu-Ode, Ogun, Nigeria: remote-first. Open to global remote
-              roles.
+              Lagos, Nigeria: remote-first. Open to global remote roles.
             </p>
             <ul className="mt-4 flex max-w-md flex-wrap gap-2" aria-label="Tagline">
               {TAGLINE.map((tag) => (
