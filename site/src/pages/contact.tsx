@@ -1,5 +1,5 @@
 import { useEffect, useState, type ComponentType } from "react"
-import { FileDown, Globe, Mail, Phone } from "lucide-react"
+import { FileDown, Globe, Mail } from "lucide-react"
 import { GithubIcon, LinkedinIcon } from "@/components/brand-icons"
 import { PressLink } from "@/components/site-bits"
 import { SectionHeader, Window } from "@/components/window"
@@ -51,11 +51,10 @@ export default function ContactPage() {
     document.title = "Find me · xayen · Ekundayo Oyinkansola"
   }, [])
 
-  const [copied, setCopied] = useState<"email" | "phone" | null>(null)
+  const [copied, setCopied] = useState<"email" | null>(null)
   const email = "belikexen@proton.me"
-  const phone = "+234 915 462 3767"
 
-  const copy = async (value: string, which: "email" | "phone") => {
+  const copy = async (value: string, which: "email") => {
     try {
       await navigator.clipboard.writeText(value)
       setCopied(which)
@@ -101,24 +100,8 @@ export default function ContactPage() {
                 </dd>
               </div>
               <div>
-                <dt className="text-[10px] uppercase tracking-[0.18em] text-ink/60">Phone</dt>
-                <dd className="mt-1.5 flex flex-wrap items-center gap-3">
-                  <a
-                    href="tel:+2349154623767"
-                    className="inline-flex items-center gap-2 text-[14px] underline decoration-2 underline-offset-4 hover:bg-ink hover:text-paper hover:no-underline"
-                  >
-                    <Phone className="size-4" aria-hidden="true" />
-                    {phone}
-                  </a>
-                  <button type="button" onClick={() => copy(phone, "phone")} className={chip}>
-                    {copied === "phone" ? "Copied" : "Copy"}
-                  </button>
-                  <span className="font-mono text-[11px] text-ink/60">GMT+1</span>
-                </dd>
-              </div>
-              <div>
                 <dt className="text-[10px] uppercase tracking-[0.18em] text-ink/60">Base</dt>
-                <dd className="mt-1.5">Lagos, Nigeria · remote-first</dd>
+                <dd className="mt-1.5">Lagos, Nigeria · GMT+1 · remote-first</dd>
               </div>
             </dl>
             <span role="status" aria-live="polite" className="sr-only">
@@ -189,10 +172,10 @@ export default function ContactPage() {
 
           <Window file="presence.txt" note="where the lights are on">
             <p className="text-[13.5px] leading-relaxed text-ink/85">
-              Best door: email above. Second: the phone. Third: GitHub, for
-              six ships with CI and tests, SDKs and postmortems. LinkedIn for
-              the short version of the record. Elsewhere the lights burn at
-              Agenda X, where the production stack actually lives.
+              Best door: email above. Second: GitHub, for six ships with CI
+              and tests, SDKs and postmortems. Third: LinkedIn for the short
+              version of the record. Elsewhere the lights burn at Agenda X,
+              where the production stack actually lives.
             </p>
             <PressLink to="/" variant="ghost" className="mt-4 self-start">
               Back to hello
