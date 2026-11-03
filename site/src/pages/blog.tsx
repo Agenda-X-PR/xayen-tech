@@ -1,4 +1,5 @@
 import { useEffect } from "react"
+import { Link } from "react-router-dom"
 import { posts } from "@/content/posts"
 import { PressLink } from "@/components/site-bits"
 import { SectionHeader, Window } from "@/components/window"
@@ -19,7 +20,12 @@ export default function BlogPage() {
           {posts.map((post) => (
             <Window key={post.slug} file={post.file} note={post.date}>
               <h3 className="font-mono text-lg">
-                <a href={post.href}>{post.title}</a>
+                <Link
+                  to={post.href}
+                  className="underline decoration-2 underline-offset-4 hover:bg-ink hover:text-paper hover:no-underline"
+                >
+                  {post.title}
+                </Link>
               </h3>
               <p className="mt-2 text-[13.5px] leading-relaxed text-ink/85">{post.teaser}</p>
             </Window>

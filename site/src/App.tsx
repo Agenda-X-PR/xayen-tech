@@ -10,6 +10,7 @@ import { useClock } from "@/hooks/use-clock"
 const HomePage = lazy(() => import("@/pages/home"))
 const ProjectsPage = lazy(() => import("@/pages/projects"))
 const BlogPage = lazy(() => import("@/pages/blog"))
+const BlogPostPage = lazy(() => import("@/pages/blog-post"))
 const AboutPage = lazy(() => import("@/pages/about"))
 const ContactPage = lazy(() => import("@/pages/contact"))
 
@@ -118,6 +119,7 @@ export default function App() {
           <Route path="/" element={<HomePage />} />
           <Route path="/projects" element={<ProjectsPage />} />
           <Route path="/blog" element={<BlogPage />} />
+          <Route path="/blog/reconcile" element={<BlogPostPage />} />
           <Route path="/about" element={<AboutPage />} />
           <Route path="/contact" element={<ContactPage />} />
           <Route path="*" element={<Navigate to="/" replace />} />

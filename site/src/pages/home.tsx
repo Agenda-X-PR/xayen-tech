@@ -230,14 +230,19 @@ export default function HomePage() {
               </div>
             </div>
             <div className="absolute top-16 left-1/2 w-[82%] -translate-x-1/2 md:top-20 md:w-[68%]">
-              <Window file="field-notes.md" note="buffered draft state · 0 posts live">
+              <Window file="field-notes.md" note="1 post live · newest first">
                 <p className="font-mono text-[12px] text-ink">
-                  <span className="text-accent">$</span> Xayen --publish "first post"
+                  <span className="text-accent">$</span> Xayen --publish "the
+                  reconcile write-up"
                 </p>
                 <p className="mt-1.5 font-mono text-[11.5px] text-ink/75">
-                  waiting on the write-up: notes are in the buffer
+                  live now: the reconciliation tool I almost didn&rsquo;t
+                  finish
                   <span className="caret-blink ml-1 inline-block h-3.5 w-2 translate-y-0.5 bg-ink" />
                 </p>
+                <PressLink to="/blog/reconcile" variant="ghost" className="mt-3 self-start">
+                  Read the post
+                </PressLink>
               </Window>
             </div>
           </div>
