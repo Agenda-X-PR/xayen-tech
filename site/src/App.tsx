@@ -60,7 +60,7 @@ function SiteFooter() {
             { label: "Agenda X", href: "https://agendax.com.ng", aria: undefined, icon: Globe },
             {
               label: "Résumé .docx",
-              href: "/assets/Ekundayo-Oyinkansola-Resume-2026.docx",
+              href: "/assets/Ekundayo-Oyinkansola-Resume-2026-v4.docx",
               aria: "Résumé .docx: Word document download",
               icon: FileDown,
             },

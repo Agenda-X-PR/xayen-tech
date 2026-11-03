@@ -16,7 +16,7 @@ const TAGLINE = [
 const FACTS = [
   "Hacktoberfest 2026: Best Open-Source AI Project",
   "Splunk SIEM · SIEM monitoring",
-  "Six open-source projects, all with CI",
+  "Seven open-source projects, all with CI",
   "Llama 3.3 + FastAPI + React 19",
   "picoCTF 2023 · top 15%",
   "Open to global remote roles",
@@ -79,7 +79,7 @@ export default function HomePage() {
                 View work
               </PressLink>
               <PressLink
-                href="/assets/Ekundayo-Oyinkansola-Resume-2026.docx"
+                href="/assets/Ekundayo-Oyinkansola-Resume-2026-v4.docx"
                 download
                 variant="ghost"
                 aria-label="Résumé .docx: Word document download"
@@ -163,16 +163,18 @@ export default function HomePage() {
               </PressLink>
             </Window>
 
-            <Window file="open-ports.md" note="six open-source ships · CI on every one">
+            <Window file="open-ports.md" note="seven open-source ships · CI on every one">
               <h3 className="font-mono text-lg">The SDK fleet</h3>
               <p className="mt-2 text-[13.5px] leading-relaxed text-ink/85">
-                Six open-source projects across Java, Python and TypeScript:
+                Seven open-source projects across Java, Python and TypeScript:
                 a tested ALATPay Java SDK (Wema Bank), a multi-gateway SDK
                 unifying Paystack, Flutterwave, Monnify and Interswitch, a
                 Python webhook reliability service, a defensive log-triaging
-                CLI, the AI dashboard above, and a payments fraud and abuse
-                detection platform. All six carry CI pipelines and automated
-                tests; the dashboard and the webhook relay run as live demos.
+                CLI, reconcile for matching processor exports against bank
+                statements, the AI dashboard above, and a payments fraud and
+                abuse detection platform. All seven carry CI pipelines and
+                automated tests; the dashboard and the webhook relay run as
+                live demos.
               </p>
               <PressLink to="/projects" variant="ghost" className="mt-4 self-start">
                 Every ship, in detail

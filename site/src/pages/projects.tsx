@@ -237,6 +237,27 @@ export default function ProjectsPage() {
             </PressLink>
           </Window>
 
+          <Window file="reconcile.md" note="stdlib-only · 9 tests · MIT">
+            <h3 className="font-mono text-lg">reconcile</h3>
+            <p className="mt-2 text-[13.5px] leading-relaxed text-ink/85">
+              A Python CLI matching payment processor exports against bank
+              statements: fuzzy matching on amount (±₦0.01), date (±3 days)
+              and reference (case-insensitive). Standard library only, so it
+              runs anywhere without dependencies.
+            </p>
+            <ul className="mt-3 grid gap-1 font-mono text-[11.5px] text-ink/75">
+              <li>&gt; 9 tests, CI on python 3.11 to 3.13</li>
+              <li>&gt; zero dependencies outside the standard library</li>
+            </ul>
+            <PressLink
+              href="https://github.com/Agenda-X-PR/reconcile"
+              variant="ghost"
+              className="mt-4 self-start"
+            >
+              Code on GitHub
+            </PressLink>
+          </Window>
+
           <Window
             file="bench-work.md"
             note="Geoplex Drillteq · SIEM benches, 2024"

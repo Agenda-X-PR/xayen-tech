@@ -58,7 +58,7 @@ export function DesktopBar() {
             </NavLink>
           ))}
           <a
-            href="/assets/Ekundayo-Oyinkansola-Resume-2026.docx"
+            href="/assets/Ekundayo-Oyinkansola-Resume-2026-v4.docx"
             download
             aria-label="Résumé .docx: Word document download"
             className={linkBase}

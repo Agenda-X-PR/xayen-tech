@@ -34,7 +34,7 @@ const SOCIALS: Array<{
   },
   {
     label: "Résumé .docx",
-    href: "/assets/Ekundayo-Oyinkansola-Resume-2026.docx",
+    href: "/assets/Ekundayo-Oyinkansola-Resume-2026-v4.docx",
     aria: "Résumé .docx: Word document download",
     icon: FileDown,
   },
@@ -172,7 +172,7 @@ export default function ContactPage() {
 
           <Window file="presence.txt" note="where the lights are on">
             <p className="text-[13.5px] leading-relaxed text-ink/85">
-              Best door: email above. Second: GitHub, for six ships with CI
+              Best door: email above. Second: GitHub, for seven ships with CI
               and tests, SDKs and postmortems. Third: LinkedIn for the short
               version of the record. Elsewhere the lights burn at Agenda X,
               where the production stack actually lives.
