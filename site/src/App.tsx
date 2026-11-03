@@ -11,6 +11,7 @@ const HomePage = lazy(() => import("@/pages/home"))
 const ProjectsPage = lazy(() => import("@/pages/projects"))
 const BlogPage = lazy(() => import("@/pages/blog"))
 const BlogPostPage = lazy(() => import("@/pages/blog-post"))
+const BlogPostAlatpayPage = lazy(() => import("@/pages/blog-post-alatpay"))
 const AboutPage = lazy(() => import("@/pages/about"))
 const ContactPage = lazy(() => import("@/pages/contact"))
 
@@ -120,6 +121,10 @@ export default function App() {
           <Route path="/projects" element={<ProjectsPage />} />
           <Route path="/blog" element={<BlogPage />} />
           <Route path="/blog/why-reconciliation-fails-in-excel.html" element={<BlogPostPage />} />
+          <Route
+            path="/blog/i-built-an-sdk-because-i-was-desperate.html"
+            element={<BlogPostAlatpayPage />}
+          />
           <Route
             path="/blog/reconcile"
             element={<Navigate to="/blog/why-reconciliation-fails-in-excel.html" replace />}
