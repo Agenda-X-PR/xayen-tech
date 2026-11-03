@@ -41,6 +41,7 @@ const SOCIALS: Array<{
 ]
 
 const DEMOS: Array<[string, string, string]> = [
+  ["reconcile-demo.onrender.com", "https://reconcile-demo.onrender.com/", "reconcile demo: reconcile-demo.onrender.com, CSV upload in the browser"],
   ["agendax.com.ng/demo", "https://agendax.com.ng/demo", "Triage Engine demo: agendax.com.ng/demo, synthetic data"],
   ["ai-triage-dashboard.vercel.app", "https://ai-triage-dashboard.vercel.app", "AI Triage Dashboard: ai-triage-dashboard.vercel.app, live demo"],
   ["webhook-relay-xxvu.onrender.com/docs", "https://webhook-relay-xxvu.onrender.com/docs", "Webhook Relay API docs: webhook-relay-xxvu.onrender.com/docs"],
@@ -146,7 +147,7 @@ export default function ContactPage() {
         </div>
 
         <div className="mt-10 grid gap-6 lg:grid-cols-2">
-          <Window file="live-demos.md" note="all three run right now">
+          <Window file="live-demos.md" note="all four run right now">
             <h3 className="font-mono text-lg">Live demos</h3>
             <ul className="mt-2 grid gap-2">
               {DEMOS.map(([label, href, aria]) => (

@@ -129,7 +129,7 @@ export default function AboutPage() {
               Hacktoberfest 2026 closed with Best Open-Source AI Project, won
               with OnaAsa at Hacktoberfest Hack Day Lagos x AI Collectives.
               Seven open-source projects shipped across Java, Python and
-              TypeScript, each with CI pipelines and automated tests, two of
+              TypeScript, each with CI pipelines and automated tests, three of
               them running as live demos. The tooling habit: write the tests,
               pin the CI, document it, then let the README do the bragging.
             </p>

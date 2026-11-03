@@ -173,8 +173,8 @@ export default function HomePage() {
                 CLI, reconcile for matching processor exports against bank
                 statements, the AI dashboard above, and a payments fraud and
                 abuse detection platform. All seven carry CI pipelines and
-                automated tests; the dashboard and the webhook relay run as
-                live demos.
+                automated tests; the dashboard, the webhook relay and
+                reconcile-demo run as live demos.
               </p>
               <PressLink to="/projects" variant="ghost" className="mt-4 self-start">
                 Every ship, in detail
@@ -240,7 +240,11 @@ export default function HomePage() {
                   finish
                   <span className="caret-blink ml-1 inline-block h-3.5 w-2 translate-y-0.5 bg-ink" />
                 </p>
-                <PressLink to="/blog/reconcile" variant="ghost" className="mt-3 self-start">
+                <PressLink
+                  to="/blog/why-reconciliation-fails-in-excel.html"
+                  variant="ghost"
+                  className="mt-3 self-start"
+                >
                   Read the post
                 </PressLink>
               </Window>

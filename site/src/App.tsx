@@ -119,7 +119,11 @@ export default function App() {
           <Route path="/" element={<HomePage />} />
           <Route path="/projects" element={<ProjectsPage />} />
           <Route path="/blog" element={<BlogPage />} />
-          <Route path="/blog/reconcile" element={<BlogPostPage />} />
+          <Route path="/blog/why-reconciliation-fails-in-excel.html" element={<BlogPostPage />} />
+          <Route
+            path="/blog/reconcile"
+            element={<Navigate to="/blog/why-reconciliation-fails-in-excel.html" replace />}
+          />
           <Route path="/about" element={<AboutPage />} />
           <Route path="/contact" element={<ContactPage />} />
           <Route path="*" element={<Navigate to="/" replace />} />

@@ -20,6 +20,6 @@ export const posts: Post[] = [
     title: "The Reconciliation Tool I Almost Didn't Finish",
     teaser:
       "Twelve hours across five nights: a Python CLI matching processor exports against bank statements, born of a ₦0.02 discrepancy at 11pm. Floats lie. Decimal does not.",
-    href: "/blog/reconcile",
+    href: "/blog/why-reconciliation-fails-in-excel.html",
   },
 ]
