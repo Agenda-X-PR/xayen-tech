@@ -64,17 +64,7 @@ export default function BlogPage() {
           ))}
         </div>
 
-        <div className="mt-10 grid gap-6 lg:grid-cols-[1fr_1fr]">
-          <Window file="how-posts-land.md" note="editing guide">
-            <h3 className="font-mono text-lg">Publishing window</h3>
-            <p className="mt-2 text-[13.5px] leading-relaxed text-ink/85">
-              Posts live in <code className="font-mono">src/content/posts.ts</code>:
-              add a Post object, and the page renders it above the ghost slots,
-              newest first. File names, dates, teasers, and links all come from
-              the entry, nothing else needs touching.
-            </p>
-          </Window>
-
+        <div className="mt-10">
           <Window file="signal.md" note="06 · Signal">
             <h3 className="font-mono text-lg">Stay in orbit while the buffer fills.</h3>
             <p className="mt-2 text-[13.5px] leading-relaxed text-ink/85">
