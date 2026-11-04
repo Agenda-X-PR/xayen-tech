@@ -192,7 +192,7 @@ export default function AboutPage() {
                 <ul className="mt-2 grid gap-1.5 text-[13px] leading-relaxed text-ink/80">
                   {entry.bullets.map((b) => (
                     <li key={b} className="flex gap-2">
-                      <span aria-hidden="true" className="shrink-0 font-mono text-ink/50">
+                      <span aria-hidden="true" className="shrink-0 font-mono text-ink/60">
                         &gt;
                       </span>
                       <span>{b}</span>

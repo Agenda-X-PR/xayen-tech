@@ -9,7 +9,7 @@ const code =
 const para = "mt-3.5 text-[14px] leading-relaxed text-ink/85"
 const head = "mt-9 font-mono text-[17px] leading-snug tracking-tight text-ink"
 const li = "mt-2 flex gap-2 text-[13.5px] leading-relaxed text-ink/85"
-const marker = "shrink-0 font-mono text-ink/50"
+const marker = "shrink-0 font-mono text-ink/60"
 
 const link =
   "underline decoration-2 underline-offset-4 hover:bg-ink hover:text-paper hover:no-underline"

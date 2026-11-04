@@ -14,6 +14,15 @@ export interface Post {
  */
 export const posts: Post[] = [
   {
+    slug: "webhook-relay",
+    file: "webhook-relay.md",
+    date: "November 4, 2026",
+    title: "Building a Service for Failures You Can't See",
+    teaser:
+      "Built entirely around failures that don't announce themselves: store first, dedupe on (provider, event_id), verify HMAC signatures in constant time. 28 tests, zero users, and two weeks of red CI for a one-line fix.",
+    href: "/blog/building-a-service-for-failures-you-cant-see.html",
+  },
+  {
     slug: "alatpay-sdk",
     file: "alatpay-sdk.md",
     date: "November 3, 2026",
