@@ -1,6 +1,6 @@
 import { Suspense, lazy, useEffect, type ComponentType } from "react"
 import { FileDown, Globe } from "lucide-react"
-import { GithubIcon, LinkedinIcon } from "@/components/brand-icons"
+import { DevIcon, GithubIcon, LinkedinIcon } from "@/components/brand-icons"
 import { Navigate, Outlet, Route, Routes, useLocation } from "react-router-dom"
 import { DesktopBar } from "@/components/desktop-bar"
 import { useClock } from "@/hooks/use-clock"
@@ -59,18 +59,34 @@ function SiteFooter() {
         </div>
         <nav aria-label="Footer" className="flex flex-wrap items-start gap-x-4 gap-y-2">
           {[
-            { label: "GitHub", href: "https://github.com/Agenda-X-PR", aria: undefined, icon: GithubIcon },
-            { label: "LinkedIn", href: "https://linkedin.com/in/xayen", aria: undefined, icon: LinkedinIcon },
-            { label: "Agenda X", href: "https://agendax.com.ng", aria: undefined, icon: Globe },
+            { label: "GitHub", href: "https://github.com/Agenda-X-PR", aria: "GitHub profile: Agenda-X-PR", iconOnly: true, icon: GithubIcon },
+            { label: "LinkedIn", href: "https://linkedin.com/in/xayen", aria: "LinkedIn profile: xayen", iconOnly: true, icon: LinkedinIcon },
+            { label: "DEV", href: "https://dev.to/xayenuniverse", aria: "DEV profile: xayenuniverse", iconOnly: true, icon: DevIcon },
+            { label: "Agenda X", href: "https://agendax.com.ng", aria: undefined, iconOnly: false, icon: Globe },
             {
               label: "Résumé .docx",
               href: "/assets/Ekundayo-Oyinkansola-Resume-2026-v4.docx",
               aria: "Résumé .docx: Word document download",
+              iconOnly: false,
               icon: FileDown,
             },
           ].map((item) => {
             const Icon = item.icon as ComponentType<{ className?: string }>
             const isResume = item.label.startsWith("Résumé")
+            if (item.iconOnly) {
+              return (
+                <a
+                  key={item.label}
+                  href={item.href}
+                  aria-label={item.aria}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="flex size-7 items-center justify-center border-2 border-ink text-ink transition-colors hover:bg-ink hover:text-paper focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-ink"
+                >
+                  <Icon aria-hidden="true" className="size-4" />
+                </a>
+              )
+            }
             return (
               <a
                 key={item.label}

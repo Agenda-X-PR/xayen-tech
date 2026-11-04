@@ -1,6 +1,6 @@
 import { useEffect, useState, type ComponentType } from "react"
 import { FileDown, Globe, Mail } from "lucide-react"
-import { GithubIcon, LinkedinIcon } from "@/components/brand-icons"
+import { DevIcon, GithubIcon, LinkedinIcon } from "@/components/brand-icons"
 import { PressLink } from "@/components/site-bits"
 import { SectionHeader, Window } from "@/components/window"
 
@@ -24,6 +24,13 @@ const SOCIALS: Array<{
     aria: "LinkedIn profile: xayen",
     target: true,
     icon: LinkedinIcon,
+  },
+  {
+    label: "DEV",
+    href: "https://dev.to/xayenuniverse",
+    aria: "DEV profile: xayenuniverse",
+    target: true,
+    icon: DevIcon,
   },
   {
     label: "Agenda X",
