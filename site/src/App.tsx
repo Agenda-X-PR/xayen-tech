@@ -13,6 +13,7 @@ const BlogPage = lazy(() => import("@/pages/blog"))
 const BlogPostPage = lazy(() => import("@/pages/blog-post"))
 const BlogPostAlatpayPage = lazy(() => import("@/pages/blog-post-alatpay"))
 const BlogPostRelayPage = lazy(() => import("@/pages/blog-post-relay"))
+const BlogPostPaymentsPage = lazy(() => import("@/pages/blog-post-payments"))
 const AboutPage = lazy(() => import("@/pages/about"))
 const ContactPage = lazy(() => import("@/pages/contact"))
 
@@ -129,6 +130,10 @@ export default function App() {
           <Route
             path="/blog/building-a-service-for-failures-you-cant-see.html"
             element={<BlogPostRelayPage />}
+          />
+          <Route
+            path="/blog/i-built-a-payments-detection-platform-and-never-ran-it.html"
+            element={<BlogPostPaymentsPage />}
           />
           <Route
             path="/blog/reconcile"

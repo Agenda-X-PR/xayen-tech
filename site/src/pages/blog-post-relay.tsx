@@ -624,8 +624,14 @@ export default function BlogPostRelayPage() {
               >
                 I Built an SDK Because I Was Desperate
               </a>
-              . The fourth will be about the payments detection platform, when
-              I get to it.
+              . The fourth is about the payments detection platform:{" "}
+              <a
+                href="/blog/i-built-a-payments-detection-platform-and-never-ran-it.html"
+                className={link}
+              >
+                I Built a Payments Detection Platform and Never Ran It
+              </a>
+              .
             </p>
           </article>
 

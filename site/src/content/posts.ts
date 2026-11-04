@@ -14,6 +14,15 @@ export interface Post {
  */
 export const posts: Post[] = [
   {
+    slug: "payments-detection",
+    file: "payments-detection.md",
+    date: "November 4, 2026",
+    title: "I Built a Payments Detection Platform and Never Ran It",
+    teaser:
+      "Six tests, four rules, five containers, zero end-to-end runs. STRIDE, Sigma-inspired YAML and prompt-injection defenses, all tested piece by piece, with the Docker gap documented in the README instead of hidden.",
+    href: "/blog/i-built-a-payments-detection-platform-and-never-ran-it.html",
+  },
+  {
     slug: "webhook-relay",
     file: "webhook-relay.md",
     date: "November 4, 2026",

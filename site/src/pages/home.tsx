@@ -230,14 +230,14 @@ export default function HomePage() {
               </div>
             </div>
             <div className="absolute top-16 left-1/2 w-[82%] -translate-x-1/2 md:top-20 md:w-[68%]">
-              <Window file="field-notes.md" note="3 posts live · newest first">
+              <Window file="field-notes.md" note="4 posts live · newest first">
                 <p className="font-mono text-[12px] text-ink">
-                  <span className="text-accent">$</span> Xayen --publish
-                  "invisible failures"
+                  <span className="text-accent">$</span> Xayen --publish "the
+                  unverified one"
                 </p>
                 <p className="mt-1.5 font-mono text-[11.5px] text-ink/75">
-                  live now: the relay story, the SDK confession and the
-                  reconcile postmortem
+                  live now: the detection platform, the relay, the SDK and
+                  the reconcile stories
                   <span className="caret-blink ml-1 inline-block h-3.5 w-2 translate-y-0.5 bg-ink" />
                 </p>
                 <PressLink to="/blog" variant="ghost" className="mt-3 self-start">
